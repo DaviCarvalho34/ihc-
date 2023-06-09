@@ -1,0 +1,125 @@
+.CustomTextArea {
+  
+ 
+    select,
+   textarea {
+      width: 100%;
+      padding: 11.5px 15px 15px 15px;
+      border: 1px solid transparent;
+      background: transparent;
+      appearance: unset;
+      -moz-appearance: unset;
+      -webkit-appearance: unset;
+      -o-appearance: unset;
+      -ms-appearance: unset;
+      outline: none;
+      -moz-outline: none;
+      -webkit-outline: none;
+      -o-outline: none;
+      -ms-outline: none;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -o-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      transition: .3s ease;
+  }
+  
+  
+  select {
+      color: #f2f2f2;
+  }
+  
+  
+  
+  
+  
+  textarea {
+      color: #fff;
+  }
+  
+  
+  textarea,
+  select {
+      border-bottom: 1px solid;
+      border-bottom-color: rgba(255, 255, 255, 0.3);
+  }
+  textarea:focus,
+  select:focus {
+      border-bottom: 1px solid #ccc;
+  }
+  select option {
+      background: #4835d4;
+  }
+  
+  
+  
+  
+  .register {
+      background: #fff;
+      border-radius: 25px;
+      -o-border-radius: 25px;
+      -ms-border-radius: 25px;
+      -moz-border-radius: 25px;
+      -webkit-border-radius: 25px;
+      box-shadow: 0px 6px 17px 0px rgba(0, 0, 0, 0.15);
+      -o-box-shadow: 0px 6px 17px 0px rgba(0, 0, 0, 0.15);
+      -ms-box-shadow: 0px 6px 17px 0px rgba(0, 0, 0, 0.15);
+      -moz-box-shadow: 0px 6px 17px 0px rgba(0, 0, 0, 0.15);
+      -webkit-box-shadow: 0px 6px 17px 0px rgba(0, 0, 0, 0.15);
+      width: 180px;
+      border: none;
+      margin: 6px 0 50px 0px;
+      cursor: pointer;
+      color: #333;
+      font-weight: 700;
+      font-size: 15px;
+  }
+  .register:hover {
+      background: #ccc;
+  }
+  textarea {
+      padding: 12.5px;
+  }
+  textarea::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #666;
+    font-size: 16px;
+  }
+  textarea::-moz-placeholder { /* Firefox 19+ */
+    color: #666;
+    font-size: 16px;
+  }
+  textarea:-ms-input-placeholder { /* IE 10+ */
+    color: #666;
+    font-size: 16px;
+  }
+  textarea:-moz-placeholder { /* Firefox 18- */
+    color: #666;
+    font-size: 16px;
+  }
+  textarea::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #f2f2f2;
+    font-size: 16px;
+  }
+  textarea::-moz-placeholder { /* Firefox 19+ */
+    color: #f2f2f2;
+    font-size: 16px;
+  }
+  textarea:-ms-input-placeholder { /* IE 10+ */
+    color: #f2f2f2;
+    font-size: 16px;
+  }
+  textarea:-moz-placeholder { /* Firefox 18- */
+    color: #f2f2f2;
+    font-size: 16px;
+  }
+  
+  }
+  
+  
+  /* Responsive */
+  
+  
+  

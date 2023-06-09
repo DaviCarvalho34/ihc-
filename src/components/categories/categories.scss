@@ -1,0 +1,79 @@
+.Categories {
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    margin-top: 4rem;
+    padding-left: 2rem;
+  
+    .titleDash {
+      margin-bottom: 2rem;
+      color: var(--main-darker-color);
+    }
+  
+    .add-products {
+      width: 13rem;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 1rem;
+      cursor: pointer;
+      background: #7070FF;
+      color: #c1c0fd;
+    }
+  
+  }
+  .MuiModal-root {
+    width: 100%!important;
+    height: 100vh!important;
+    display: flex!important;
+    align-items: center!important;
+    justify-content: center!important;
+  
+    .MuiBox-root {
+      width: 50%;
+      /* From https://css.glass */
+      background-image: linear-gradient(to right top, #3f28e7, #412ce2, #442fde, #4632d9, #4835d4);
+      padding: 40px;
+      border-color: transparent;
+      outline: 0;
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
+      svg {
+        color: #fff;
+        align-self: flex-end;
+        cursor: pointer;
+      }
+
+      .save {
+        align-self: center;
+        width: 200px;
+        height: 50px;
+        border-radius: 15px;
+        background-color: #7566e4;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        border: none;
+        transition: 0.3 ease;
+
+        &:hover {
+          background-color: #5d4ce4;
+        }
+      }
+      
+    }
+  }
+  
+  #parent-modal-title {
+    margin-bottom: 1.8rem;
+  }
+  
+  
+  
+  

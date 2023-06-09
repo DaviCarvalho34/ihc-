@@ -1,0 +1,37 @@
+.ImageUpload {
+    height: 100px;
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    .inputfile {
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .inputfile + label {
+        font-size: 1.25em;
+        font-weight: 700;
+        padding: 10px;
+        color: #fff;
+        background-color: transparent;
+        display: inline-block;
+        border-radius: 15px;
+        border: 1px dashed #fff;
+        transition: .3s ease-out;
+    }
+    
+    .inputfile:focus + label,
+    .inputfile + label:hover {
+        border: 1px solid #fff;
+    }
+
+    .inputfile + label {
+        cursor: pointer; /* "hand" cursor */
+    }
+}

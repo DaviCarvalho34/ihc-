@@ -1,0 +1,28 @@
+.RightSide{
+    display: flex;
+    flex-direction: column;
+    padding-top: 5rem;
+    width: 95%;
+    justify-content: flex-start;
+  }
+  
+  @media screen and (max-width: 1200px) {
+    .RightSide{
+        justify-content: flex-start!important;
+        margin-top: 3rem!important;
+    }
+  }
+  
+  @media screen and (max-width: 768px)
+  {
+    .RightSide{
+        width: 100%!important;
+        margin-top: 0!important;
+    }
+    .RightSide>div{
+        display: flex!important;
+        flex-direction: column!important;
+        align-items: center!important;
+    }
+  }
+  

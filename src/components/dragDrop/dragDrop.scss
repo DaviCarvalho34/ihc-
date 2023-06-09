@@ -1,0 +1,43 @@
+.DragDrop {
+  
+    position: relative;
+    width: 100%;
+    height: 200px;
+    border: 2px dashed #A583EA;
+    border-radius: 20px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  
+    .dropFileInput__label {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      p{
+        font-size: 1.5rem;
+        color: #A583EA;
+      }
+      svg {
+        width: 70px;
+        height: 70px;
+        color: #A583EA;
+      }
+    }
+  
+    input {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+    }
+  }
+  
+  .DragDrop:hover, .DragDrop.dragover {
+    opacity: 0.6;
+  }
