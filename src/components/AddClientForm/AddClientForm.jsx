@@ -3,7 +3,7 @@ import CustomTextArea from '../CustomTextArea/CustomTextArea';
 import CustomInput from '../customInput/CustomInput';
 import CustomSelect from '../CustomSelect/CustomSelect';
 import InputNumber from '../customInput/InputNumber';
-import './addProductForm.scss';
+import './addClientForm.scss';
 import Switch from '@mui/material/Switch';
 import DragDrop from '../dragDrop/DragDrop';
 import { ImageUpload } from '../ImageUpload/ImageUpload';
@@ -47,7 +47,7 @@ function a11yProps(index) {
   };
 }
 
-export default function AddProductForm() {
+export default function AddClientForm() {
 
   const [value, setValue] = React.useState(0);
 
@@ -59,34 +59,30 @@ export default function AddProductForm() {
    
      <div className="AddProductForm">
         <div className="formHead">
-          <h2>Produto</h2>
+          <h2>Cliente</h2>
           
         </div>
         
         
         <div className="formContainer">
             <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-              <Tab label="Dados do produto" {...a11yProps(0)} />
-              <Tab label="Preço e informações fiscais" {...a11yProps(1)} />
+              <Tab label="Dados do cliente" {...a11yProps(0)} />
+              <Tab label="Endereço" {...a11yProps(1)} />
+              <Tab label="Informações de pagamento" {...a11yProps(1)} />
             </Tabs>
             <TabPanel value={value} index={0}>
             <div className="row">
-              <CustomInput name="nome do produto"/>
-              <CustomSelect name="categoria" op1="laptops" op2="smartphones" op3="relógios" op4="consoles" />
-              <InputNumber name="quantidade"/>
-              <CustomInput name="descrição curta"/>
+              <CustomInput name="nome/Razão Social"/>           
+              <CustomInput name="profissão"/>
               <CustomInput name="código"/>
+              <CustomInput name="nome fantasia"/>
             </div>
-            <div className="row">
-              <CustomInput name="palavras chave"/>
-              <CustomSelect name="status" op1="ativo" op2="inativo" op3="revisão" op4="sem estoque" />
+            <div className="row" style={{marginTop:'25px'}}>
+              <CustomSelect name="Tipo de Pessoa" op1="Física" op2="Jurídica" />
               <CustomSelect name="fornecedor" op1="Empresa 1" op2="Empresa 2" op3="Empresa 3" op4="Empresa 4" />
-              <CustomInput name="marca"/>
-            </div>
-            <div className="row">
-              <CustomInput name="Tamanho"/>
-              <CustomSelect name="Garantia" op1="Nenhuma" op2="Básica" op3="Extendida"/>
-              <CustomInput name="localização no estoque"/>
+              <CustomInput name="CPF/CNPJ"/>
+              <CustomInput name="Inscrição estadual"/>
+              
             </div>
               <h2>Fotos</h2>
             <div className="rowImage">
@@ -101,22 +97,36 @@ export default function AddProductForm() {
             </TabPanel>
             <TabPanel value={value} index={1}>
               <div className="row">
-                <CustomInput name="Preço de custo ($)"/>
-                <CustomInput name="Preço de compra ($)"/>
-                <CustomInput name="Margem de lucro ($)"/>
-                <CustomInput name="Peso líquido (KG)"/>
+                <CustomInput name="Cep"/>
+                <CustomInput name="Endereço"/>
+                <CustomInput name="Complemento"/>
+                <CustomInput name="Bairro"/>
               </div>
               <div className="row" style={{marginTop:"25px"}}>
-                <CustomInput name="Unidade "/>
-                <CustomSelect name="Unidade de entrada" op1="Peças" op2="Caixas" op3="Gramas" op4="Litros" op5="Metros"/>
-                <CustomSelect name="Unidade de saída" op1="Peças" op2="Caixas" op3="Gramas" op4="Litros" op5="Metros"/> 
-                <CustomInput name="NCM(Classificação fiscal) "/>         
+                <CustomInput name="País"/>
+                <CustomSelect name="UF" op1="AL" op2="BA" op3="SP" op4="RJ" op5="MJ"/>
+                <CustomSelect name="Cidade" op1="Salvador" op2="São Paulo" op3="Teolandia" op4="Belo Horizonte" op5="Valença"/> 
+                <CustomInput name="Telefone"/>   
+                <CustomInput name="Fax"/>         
               </div>
-              <div className="row">
-                <CustomInput name="Aliquota de ICMS (%)"/>          
-                <CustomInput name="Aliquota de IPI (%)"/>      
-                <CustomInput name="Taxa de importação (%)"/>     
+              <div className="row" style={{marginBottom:"25px"}}>
+                <CustomInput name="Celular"/>
+                <CustomInput name="Email"/>   
+                <CustomInput name="Site"/>         
               </div>
+             
+            </TabPanel>
+            <TabPanel value={value} index={2}>
+                <div className="row">
+                    <CustomInput name="Observações"/>
+                    <CustomSelect name="Condições de pagamento" op1="A vista" op2="Parcelado" op3="Boleto" op4="Trânsferencia" op5="Descontos"/> 
+                    <CustomSelect name="Plano de Contas" op1="Plano-1" op2="Plano-2" op3="Plano-3" op4="Plano-4" op5="Plano-5"/> 
+                    <CustomInput name="Grupo de Clientes"/>                  
+                </div>
+                <div className="row">
+                    <CustomSelect name="Tipo de Cliente (subst. Tributária)" op1="Contribuinte Substituto" op2="Consumidor Final" op3="Distribuidor ou revendedor"/> 
+                    <CustomInput name="Inscrição municipal"/>
+                </div>
             </TabPanel>
                      
         </div>

@@ -1,15 +1,15 @@
 import { useState } from "react";
 import { motion } from 'framer-motion';
 import ProductsTable  from "../productsTable/ProductsTable";
-import './products.scss';
+import './clients.scss';
 import { Box, Modal, Tab, Tabs, Typography } from "@mui/material";
 import AddProductForm from "../AddProductForm/AddProductForm";
 import { UilMultiply } from '@iconscout/react-unicons';
 import PropTypes from 'prop-types';
+import ClientTable from "../ClientTable/ClientTable";
+import AddClientForm from "../AddClientForm/AddClientForm";
 
-
-
-export const Products = () => {
+export const Clients = () => {
 
     const [open, setOpen] = useState(false);
 
@@ -19,18 +19,17 @@ export const Products = () => {
         setValue(newValue);
     };
 
-
     return (
         <motion.div className="Products" initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}}>
             
-            <h1 className="titleDash">Products</h1>
+            <h1 className="titleDash">Clientes</h1>
             <div className="add-products" onClick={()=>{
             setOpen(true);
             }}>
-            <h4>Add a new product</h4>
+            <h4>Novo Cliente</h4>
             </div>
             <div className="table-container">
-                <ProductsTable />
+                <ClientTable />
             </div>
 
             <div className="modalContainer">
@@ -46,7 +45,7 @@ export const Products = () => {
                     <UilMultiply onClick={()=>{
                     setOpen(false);
                 }} />
-                    <AddProductForm />
+                    <AddClientForm />
                     
                     <input type="submit" className="save" value="Salvar" />
                 </Box>
@@ -56,4 +55,6 @@ export const Products = () => {
 
         </motion.div>
     )
+
+
 }

@@ -70,7 +70,7 @@ const rows =
   const columns = [
     {
      name: "customerImage",
-     label: "image",
+     label: "foto",
      
      options: {
       filter: true,
@@ -79,7 +79,7 @@ const rows =
     },
     {
      name: "customerName",
-     label: "name",
+     label: "nome",
      options: {
       filter: true,
       sort: false,
@@ -111,7 +111,7 @@ const rows =
     },
     {
       name: "actions",
-      label: "actions",
+      label: "ações",
       options: {
        filter: true,
        sort: false,

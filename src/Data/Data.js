@@ -9,6 +9,10 @@ import {
   } from '@iconscout/react-unicons'
   import { UilBriefcaseAlt } from '@iconscout/react-unicons'
   import { UilGrid } from '@iconscout/react-unicons'
+  import { UilUserSquare } from '@iconscout/react-unicons'
+  import { UilTruck } from '@iconscout/react-unicons'
+  import { UilBuilding } from '@iconscout/react-unicons'
+  import { UilMoneyStack } from '@iconscout/react-unicons'
   
   
   
@@ -33,50 +37,82 @@ import IconDashboard from '../icons/IconDashboard'
     },
     {
       icon: UilClipboardAlt,
-      heading: 'Orders',
-      navigate: '/orders',
+      heading: 'Pedidos',
+      navigate: '/pedidos',
       index: 1,
       dropdown: false
     },
     {
       icon: UilUsersAlt,
-      heading: 'Customers',
-      navigate: '/customers',
+      heading: 'Usuários',
+      navigate: '/usuarios',
       index: 2,
+      dropdown: false
+    },
+    {
+      icon: UilUserSquare,
+      heading: 'Clientes',
+      navigate: '/clientes',
+      index: 3,
       dropdown: false
     },
     {
       icon: UilPackage,
       dropIcon: UilAngleDown,
-      heading: 'Products',
-      navigate: '/products',
-      index: 3,
+      heading: 'Produtos',
+      navigate: '/produtos',
+      index: 4,
       dropdown: true,
     },
     {
       icon: UilGrid,
       dropIcon: UilAngleDown,
-      heading: 'Categories',
-      navigate: '/category',
-      index: 4,
+      heading: 'Categorias',
+      navigate: '/categorias',
+      index: 5,
       dropdown: true,
     },
     {
       icon: UilUserMd,
       dropIcon: UilAngleDown,
-      heading: 'Employees',
-      navigate: '/employees',
-      index: 5,
+      heading: 'Funcionários',
+      navigate: '/funcionarios',
+      index: 6,
       dropdown: true,
     },
     {
       icon: UilBriefcaseAlt,
       dropIcon: UilAngleDown,
-      heading: 'Supliers',
-      navigate: '/supliers',
-      index: 6,
+      heading: 'Fornecedores',
+      navigate: '/fornecedores',
+      index: 7,
       dropdown: true,
     },
+    {
+      icon: UilTruck,
+      dropIcon: UilAngleDown,
+      heading: 'Transportadoras',
+      navigate: '/transportadoras',
+      index: 8,
+      dropdown: true,
+    },
+    {
+      icon: UilBuilding,
+      dropIcon: UilAngleDown,
+      heading: 'Empresas ligadas',
+      navigate: '/empresas',
+      index: 9,
+      dropdown: true,
+    },
+    {
+      icon: UilMoneyStack,
+      dropIcon: UilAngleDown,
+      heading: 'Operações fiscais',
+      navigate: '/operacoes-fiscais',
+      index: 10,
+      dropdown: true,
+    },
+    
     
   ]
   
@@ -155,21 +191,21 @@ import IconDashboard from '../icons/IconDashboard'
   export const ProductsData = [
     {
       productImage: 'https://http2.mlstatic.com/D_NQ_NP_626921-MLB51033775318_082022-O.webp',
-      productName: 'Macbook Pro De 13.3 Chip M2 Apple, 16gb Ram, 512gb Ssd, 12x',
+      productName: 'Macbook Pro ',
       price: 15.900,
       category: 'Colar',
       status: 'active'
     },
     {
       productImage: 'https://http2.mlstatic.com/D_NQ_NP_605126-MLM51559383638_092022-O.webp',
-      productName: 'Apple Iphone 14 Pro Max',
+      productName: 'Apple Iphone',
       price: 5000.00,
       category: 'Anel',
       status: 'inactive'
     },
     {
       productImage: 'https://http2.mlstatic.com/D_NQ_NP_841787-MLA44484414455_012021-O.webp',
-      productName: 'Sony PlayStation 5 825GB',
+      productName: 'Sony PlayStation 5',
       price: 1500.00,
       category: 'Brinco',
       status: 'active'
@@ -269,28 +305,90 @@ import IconDashboard from '../icons/IconDashboard'
       customerImage: 'https://vakilsearch.com/blog/wp-content/uploads/2022/06/What-is-meant-by-Pvt-Ltd-company_-.jpg',
       customerName: 'Empresa-1',
       category: 'laptop-',
-      mainContact: '45654836454',
+      mainContact: '456',
       status: 'active'
     },
     {
       customerImage: 'https://upload.wikimedia.org/wikipedia/commons/3/3a/M%C3%BCnster%2C_LVM%2C_B%C3%BCrogeb%C3%A4ude_--_2013_--_5149-51.jpg',
       customerName: 'Empresa-2',
       category: 'laptop-',
-      mainContact: '45654836454',
+      mainContact: '456',
       status: 'active'
     },
     {
       customerImage: 'https://images.pexels.com/photos/269077/pexels-photo-269077.jpeg?cs=srgb&dl=pexels-pixabay-269077.jpg&fm=jpg',
       customerName: 'Empresa-3',
       category: 'laptop-',
-      mainContact: '45654836454',
+      mainContact: '4565',
       status: 'active'
     },
     {
       customerImage: 'https://www.shutterstock.com/image-photo/windows-skyscraper-business-office-blue-260nw-558873121.jpg',
       customerName: 'Empresa-4',
       category: 'laptop-',
-      mainContact: '45654836454',
+      mainContact: '456',
+      status: 'active'
+    },
+  ]
+
+  export const ClientsData = [
+    {
+      customerImage: 'https://randomuser.me/api/portraits/lego/0.jpg',
+      customerName: 'João da Silva',
+      fantasyName: 'João',
+      codigo: '456',
+      status: 'active'
+    },
+    {
+      customerImage: 'https://randomuser.me/api/portraits/lego/0.jpg',
+      customerName: 'Maria',
+      fantasyName: 'Maria',
+      codigo: '456',
+      status: 'active'
+    },
+    {
+      customerImage: 'https://randomuser.me/api/portraits/lego/0.jpg',
+      customerName: 'Carlos Santos',
+      fantasyName: 'Carlos',
+      codigo: '456',
+      status: 'active'
+    },
+    {
+      customerImage: 'https://randomuser.me/api/portraits/lego/6.jpg',
+      customerName: 'Davi',
+      fantasyName: 'Davi Carvalho',
+      codigo: '456',
+      status: 'active'
+    },
+  ]
+
+  export const CarriersData = [
+    {
+      customerImage: 'https://www.twtransportes.com.br/wp-content/uploads/2021/11/caminhao1.jpg',
+      customerName: 'Empresa-1',
+      fantasyName: 'teste',
+      codigo: '456',
+      status: 'active'
+    },
+    {
+      customerImage: 'https://uploads-ssl.webflow.com/5e1cab8214cecfc49d37df0a/63c1aa99aea56071319903b0_blog_custo-de-transportadora-carga.jpg',
+      customerName: 'Empresa-1',
+      fantasyName: 'teste',
+      codigo: '456',
+      status: 'active'
+    },
+    {
+      customerImage: 'https://dernegocios.com.br/wp-content/uploads/2022/09/Transportadora.jpg',
+      customerName: 'Empresa-1',
+      fantasyName: 'teste',
+      codigo: '456',
+      status: 'active'
+    },
+    {
+      customerImage: 'https://www.prestex.com.br/wp-content/uploads/2021/04/Blog_Prestex-04.png',
+      customerName: 'Empresa-1',
+      fantasyName: 'teste',
+      codigo: '456',
       status: 'active'
     },
   ]

@@ -9,6 +9,10 @@ import { Categories } from './components/categories/Categories';
 import { Customers } from './components/customers/Customers';
 import { Employees } from './components/employees/Employees';
 import { Supliers } from './components/Suppliers/Supliers';
+import { Clients } from './components/Clients/Clients';
+import { Carriers } from './components/carriers/Carriers';
+import { Companies } from './components/Companies/Companies';
+import { TaxOperations } from './components/TaxOperations/TaxOperations';
 
 function App() {
   
@@ -19,11 +23,15 @@ function App() {
           <Sidebar />
           <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Dashboard />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/category" element={<Categories />} />
-          <Route path="/customers" element={<Customers />} />
-          <Route path="/employees" element={<Employees />} />
-          <Route path="/supliers" element={<Supliers />} />
+          <Route path="/produtos" element={<Products />} />
+          <Route path="/categorias" element={<Categories />} />
+          <Route path="/usuarios" element={<Customers />} />
+          <Route path="/funcionarios" element={<Employees />} />
+          <Route path="/fornecedores" element={<Supliers />} />
+          <Route path="/clientes" element={<Clients />} />
+          <Route path="/transportadoras" element={<Carriers />} />
+          <Route path="/empresas" element={<Companies />} />
+          <Route path="/operacoes-fiscais" element={<TaxOperations />} />
         </Routes>
         </Router>      
           <RightSide />

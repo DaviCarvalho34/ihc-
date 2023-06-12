@@ -7,57 +7,132 @@ import './addSupliersForm.scss';
 import Switch from '@mui/material/Switch';
 import DragDrop from '../dragDrop/DragDrop';
 import { ImageUpload } from '../ImageUpload/ImageUpload';
+import PropTypes from 'prop-types';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
 
 
+function TabPanel(props) {
+  const { children, value, index, ...other } = props;
 
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        
+          <Typography>{children}</Typography>
+        
+      )}
+    </div>
+  );
+}
 
+TabPanel.propTypes = {
+  children: PropTypes.node,
+  index: PropTypes.number.isRequired,
+  value: PropTypes.number.isRequired,
+};
+
+function a11yProps(index) {
+  return {
+    id: `simple-tab-${index}`,
+    'aria-controls': `simple-tabpanel-${index}`,
+  };
+}
 
 export default function AddSuplierForm() {
 
-  const onUpload = (files) => {
-    console.log(files);
-  }
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
  
   return (
    
-     <div className="AddCategoryForm">
+     <div className="AddProductForm">
         <div className="formHead">
-          <h2>Suplier</h2>
+          <h2>Fornecedor</h2>
+          
         </div>
         
+        
         <div className="formContainer">
-         
+            <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+              <Tab label="Dados do fornecedor" {...a11yProps(0)} />
+              <Tab label="Endereço (logradouro)" {...a11yProps(1)} />
+              <Tab label="Informações de pagamento" {...a11yProps(1)} />
+            </Tabs>
+            <TabPanel value={value} index={0}>
             <div className="row">
-              <CustomInput name="suplier name"/>
-              <CustomInput name="main contact"/>
-              <CustomInput name="address"/>
-              <CustomInput name="e-mail" />
-              <CustomInput name="phone" />
+              <CustomInput name="nome/Razão Social"/>           
+              <CustomInput name="profissão"/>
+              <CustomInput name="código"/>
+              <CustomInput name="nome fantasia"/>
             </div>
-            <div className="row">             
-            <CustomInput name="website"/>  
-              <CustomSelect name="product-category"/>
+            <div className="row" style={{marginTop:'25px'}}>
+              <CustomSelect name="Tipo de Pessoa" op1="Física" op2="Jurídica" />
+              <CustomSelect name="categoria" op1="laptops" op2="smartphones" op3="consoles" op4="relogios"/>
+              <CustomInput name="CPF/CNPJ"/>
+              <CustomInput name="Inscrição estadual"/>
             </div>
-            
-            <h2>Bank information</h2>
-            <div className="row">
-                <CustomInput name="account-number"/>
-                <CustomInput name="agency"/>
-                <CustomInput name="bank"/>
-            </div> 
-              <h2>Supliers photos</h2>
+              <h2>Fotos</h2>
             <div className="rowImage">
               <div className="addImageContainer">
                 <ImageUpload />
-              </div>            
-            </div> 
-            <div className="row">
-                <CustomTextArea />
+              </div>
+              
             </div>
-
-
+            <div className="row">
+              <CustomTextArea name="Description"/>
+            </div>
+            </TabPanel>
+            <TabPanel value={value} index={1}>
+              <div className="row">
+                <CustomInput name="Cep"/>
+                <CustomInput name="Endereço"/>
+                <CustomInput name="Complemento"/>
+                <CustomInput name="Bairro"/>
+                
+              </div>
+              <div className="row" style={{marginTop:"25px"}}>
+                <CustomInput name="País"/>
+                <CustomSelect name="UF" op1="AL" op2="BA" op3="SP" op4="RJ" op5="MJ"/>
+                <CustomSelect name="Cidade" op1="Salvador" op2="São Paulo" op3="Teolandia" op4="Belo Horizonte" op5="Valença"/> 
+                <CustomInput name="Telefone"/>   
+                <CustomInput name="Fax"/>         
+              </div>
+              <div className="row" style={{marginBottom:"25px"}}>
+                <CustomInput name="Celular"/>
+                <CustomInput name="Email"/>   
+                <CustomInput name="Site"/>         
+              </div>
+             
+            </TabPanel>
+            <TabPanel value={value} index={2}>
+                <div className="row">
+                    <CustomInput name="Observações"/>
+                    <CustomSelect name="Condições de pagamento" op1="A vista" op2="Parcelado" op3="Boleto" op4="Trânsferencia" op5="Descontos"/> 
+                    <CustomSelect name="Plano de Contas" op1="Plano-1" op2="Plano-2" op3="Plano-3" op4="Plano-4" op5="Plano-5"/> 
+                    <CustomInput name="Grupo de Fornecedores"/>                  
+                </div>
+                <div className="row">
+                    <CustomSelect name="Tipo de Fornecedor (subst. Tributária)" op1="Contribuinte Substituto" op2="Consumidor Final" op3="Distribuidor ou revendedor"/> 
+                    <CustomInput name="Inscrição municipal"/>
+                </div>
+            </TabPanel>
+                     
         </div>
         
-    </div>      
+    </div>   
+      
+    
   );
 }

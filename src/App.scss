@@ -29,7 +29,8 @@
     
     .AppGlass{
       display: grid;
-      height: 97%;
+      position: relative;
+      height: 90vh;
       width: 97%;
       border-radius: 2rem;
       background: rgba(255, 255, 255, 0.34);
@@ -40,6 +41,7 @@
       overflow: hidden;
       grid-template-columns: 14rem auto 25rem;
       gap: 10px;
+      overflow-y: scroll;
       
     }
   }

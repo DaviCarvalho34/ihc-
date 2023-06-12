@@ -38,12 +38,12 @@ function CompactCard ({param, setExpanded})
           value={param.barValue} 
           text={`${param.barValue}%`}
         />
-      <span>{param.title}</span>
+      <span className='span-title'>{param.title}</span>
       </div>
       <div className="detail">
         <Png/>
-        <span>${param.value}</span>
-        <span>Last 24 hours</span>
+        <span className='span-value'>${param.value}</span>
+        <span className='span-text'>Last 24 hours</span>
       </div>
     </motion.div>
   )

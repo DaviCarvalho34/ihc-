@@ -5,15 +5,15 @@ export const ImageUpload = () => {
         <div className="ImageUpload">
             <div>
                 <input type="file" className="inputfile" name="" id="file" />
-                <label for="file">Choose a file</label>
+                <label for="file">Arquivo</label>
             </div>
             <div>
                 <input type="file" className="inputfile" name="" id="file" />
-                <label for="file">Choose a file</label>
+                <label for="file">Arquivo</label>
             </div>
             <div>
                 <input type="file" className="inputfile" name="" id="file" />
-                <label for="file">Choose a file</label>
+                <label for="file">Arquivo</label>
             </div>
            
             

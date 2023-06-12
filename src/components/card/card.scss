@@ -119,3 +119,28 @@
       width: 80%!important;
     }
   }
+
+  @media screen and (max-width: 1280px){
+    .CompactCard {
+
+      .span-value {
+        font-size: 16px!important;
+      }
+
+      .span-title {
+        font-size: 16px!important;
+      }
+  
+     
+      
+      .span-text {
+        font-size: 14px!important;
+      }
+
+      .CircularProgressbar {
+        width: 5rem!important;
+        overflow: visible;
+      }
+
+    }
+  }

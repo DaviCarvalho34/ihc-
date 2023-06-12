@@ -9,6 +9,11 @@
       margin-bottom: 2rem;
       color: var(--main-darker-color);
     }
+
+    .button-container {
+        display: flex;
+        gap: 5px;
+    }
   
     .add-products {
       width: 13rem;

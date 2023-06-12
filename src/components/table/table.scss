@@ -55,3 +55,11 @@
       width: 18rem!important;
     }
   }
+
+  @media screen and (max-width: 1280px){
+    .CompactCard {
+      .Table {
+        width: 10%!important;
+      }
+    }
+  }

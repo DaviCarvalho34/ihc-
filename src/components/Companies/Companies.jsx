@@ -1,36 +1,32 @@
 import { useState } from "react";
 import { motion } from 'framer-motion';
 import ProductsTable  from "../productsTable/ProductsTable";
-import './products.scss';
-import { Box, Modal, Tab, Tabs, Typography } from "@mui/material";
+import './companies.scss';
+import { Box, Modal } from "@mui/material";
 import AddProductForm from "../AddProductForm/AddProductForm";
-import { UilMultiply } from '@iconscout/react-unicons';
-import PropTypes from 'prop-types';
+import { UilMultiply } from '@iconscout/react-unicons'
+import EmployeesTable from "../employeesTable/EmployeesTable";
+import AddEmployeeForm from "../AddEmployeeForm/AddEmployeeForm";
+import SupliersTable from "../SupliersTable/SupliersTable";
+import AddSuplierForm from "../AddSupliersForm/AddSupliersForm";
+import AddCompanyForm from "../addCompanyForm/AddCompanyForm";
 
 
-
-export const Products = () => {
+export const Companies = () => {
 
     const [open, setOpen] = useState(false);
-
-    const [value, setValue] = useState(0);
-
-    const handleChange = (event, newValue) => {
-        setValue(newValue);
-    };
-
 
     return (
         <motion.div className="Products" initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}}>
             
-            <h1 className="titleDash">Products</h1>
+            <h1 className="titleDash">Empresas ligadas</h1>
             <div className="add-products" onClick={()=>{
             setOpen(true);
             }}>
-            <h4>Add a new product</h4>
+            <h4>Nova empresa</h4>
             </div>
             <div className="table-container">
-                <ProductsTable />
+                <SupliersTable title="Empresas ligadas" />
             </div>
 
             <div className="modalContainer">
@@ -40,17 +36,13 @@ export const Products = () => {
                 aria-labelledby="parent-modal-title"
                 aria-describedby="parent-modal-description"
             >
-                
                 <Box sx={{width: 600, padding: 3 }}>
-                
                     <UilMultiply onClick={()=>{
                     setOpen(false);
                 }} />
-                    <AddProductForm />
-                    
-                    <input type="submit" className="save" value="Salvar" />
+                    <AddCompanyForm />
+                    <input type="submit" className="save" value="Save" />
                 </Box>
-                
             </Modal>
             </div>
 

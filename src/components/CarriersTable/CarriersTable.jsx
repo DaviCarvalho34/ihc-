@@ -1,22 +1,22 @@
-import { SupliersData } from '../../Data/Data';
+import { CarriersData } from '../../Data/Data';
 import MUIDataTable from "mui-datatables";
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
-import './supliersTable.scss'
+import './carriersTable.scss'
 import { useState } from 'react';
 import { Box, Modal } from '@mui/material';
 import { UilMultiply } from '@iconscout/react-unicons'
 import AddProductForm from '../AddProductForm/AddProductForm';
-import AddEmployeeForm from '../AddEmployeeForm/AddEmployeeForm';
-import AddSuplierForm from '../AddSupliersForm/AddSupliersForm';
+import AddClientForm from '../AddClientForm/AddClientForm';
+import AddCarriersForm from '../AddCarriersForm/AddCarriersForm';
 
-function createData(customerImage, customerName, category, mainContact, status, actions) {
-    return { customerImage, customerName, category, mainContact, status, actions };
+function createData(productImage, customerName, fantasyName, codigo, status, actions) {
+    return { productImage, customerName, fantasyName, codigo, status, actions };
 }
 
 const rows =  
-  SupliersData.map((item,index)=>{
-    return createData(<img src={item.customerImage} style={{width:'80px'}} alt="" />, item.customerName, item.category, item.mainContact, (()=>{
+  CarriersData.map((item,index)=>{
+    return createData(<img src={item.customerImage} style={{width:'80px'}} alt="" />, item.customerName, item.fantasyName, item.codigo, (()=>{
       if(item.status === "inactive") {
         return <span className="statusProductInactive">Inactive</span>
       } else {
@@ -31,23 +31,25 @@ const rows =
             setOpen(true);
           }} />
         </div>
-        
         <div className="modalContainer">
-            
             <Modal
-                open={open}
-                onClose={()=>setOpen(false)}
-                aria-labelledby="parent-modal-title"
-                aria-describedby="parent-modal-description"
-            >
-                <Box sx={{width: 600, padding: 3 }}>
-                    <UilMultiply onClick={()=>{
-                    setOpen(false);
-                }} />
-                    <AddSuplierForm />
-                    <input type="submit" className="save" value="Save" />
-                </Box>
-            </Modal>
+                    open={open}
+                    onClose={()=>setOpen(false)}
+                    aria-labelledby="parent-modal-title"
+                    aria-describedby="parent-modal-description"
+                >
+                    
+                    <Box sx={{width: 600, padding: 3 }}>
+                    
+                        <UilMultiply onClick={()=>{
+                        setOpen(false);
+                    }} />
+                        <AddCarriersForm />
+                        
+                        <input type="submit" className="save" value="Salvar" />
+                    </Box>
+                    
+                </Modal>
             </div>
         <div className="delete">          
           <DeleteIcon />
@@ -77,7 +79,7 @@ const rows =
 
   const columns = [
     {
-     name: "customerImage",
+     name: "productImage",
      label: "foto",
      
      options: {
@@ -94,16 +96,16 @@ const rows =
      }
     },
     {
-     name: "category",
-     label: "categoria",
+     name: "fantasyName",
+     label: "nome fantasia",
      options: {
       filter: true,
       sort: false,
      }
     },
     {
-     name: "mainContact",
-     label: "contato",
+     name: "codigo",
+     label: "código",
      options: {
       filter: true,
       sort: false,
@@ -133,12 +135,12 @@ const rows =
         rowsPerPageOptions: [4, 10, 20, 50],
     };
 
-export default function SupliersTable({title}) {
+export default function CarriersTable() {
 
     return (
       
         <MUIDataTable
-            title={title}
+            title={"Clientes"}
             data={rows}
             columns={columns}
             options={options}
