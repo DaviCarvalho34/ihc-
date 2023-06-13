@@ -19,6 +19,7 @@ import { Orders } from './components/Orders/Orders';
 import { Ecommerce } from './components/Ecommerce/Ecommerce';
 import { Budget } from './components/Budget/Budget';
 import { ServiceOrder } from './components/ServiceOrder/ServiceOrder';
+import { TaxInvoice } from './components/TaxInvoice/TaxInvoice';
 
 function App() {
   
@@ -44,6 +45,7 @@ function App() {
           <Route path="/ecommerce" element={<Ecommerce />} />
           <Route path="/orcamentos" element={<Budget />} />
           <Route path="/ordem-de-servico" element={<ServiceOrder />} />
+          <Route path="/notas-fiscais" element={<TaxInvoice />} />
         </Routes>
         </Router>      
           <RightSide />

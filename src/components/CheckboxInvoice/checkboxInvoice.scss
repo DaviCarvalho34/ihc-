@@ -1,0 +1,23 @@
+.box-group {
+    display: flex;
+    flex-direction: column;
+    
+    .boxItem{
+        display: flex;
+        align-items: center;
+        label {
+            color: #fff;
+        }
+        margin-top: -7px;
+    }
+}
+
+.container {
+    display: flex;
+    gap: 30px;
+}
+
+h4{
+    color: #fff;
+    margin-bottom: 5px;
+}

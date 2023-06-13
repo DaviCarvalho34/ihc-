@@ -18,6 +18,7 @@ import {
   import { UilAmazon } from '@iconscout/react-unicons'
   import { UilFileContractDollar } from '@iconscout/react-unicons'
   import { UilBill } from '@iconscout/react-unicons'
+  import { UilInvoice } from '@iconscout/react-unicons'
   
   
   
@@ -134,11 +135,19 @@ import IconDashboard from '../icons/IconDashboard'
       dropdown: true,
     },
     {
-      icon: UilUsdSquare,
+      icon: UilInvoice,
       dropIcon: UilAngleDown,
-      heading: 'Movimentação finaceira',
-      navigate: '/movimentacao-financeira',
+      heading: 'Notas fiscais',
+      navigate: '/notas-fiscais',
       index: 13,
+      dropdown: true,
+    },
+    {
+      icon: UilInvoice,
+      dropIcon: UilAngleDown,
+      heading: 'NF serviço',
+      navigate: '/notas-fiscais-servico',
+      index: 14,
       dropdown: true,
     },
     {
@@ -146,7 +155,7 @@ import IconDashboard from '../icons/IconDashboard'
       dropIcon: UilAngleDown,
       heading: 'Ecommerce',
       navigate: '/ecommerce',
-      index: 14,
+      index: 15,
       dropdown: true,
     },
     {
@@ -154,7 +163,7 @@ import IconDashboard from '../icons/IconDashboard'
       dropIcon: UilAngleDown,
       heading: 'Orçamentos',
       navigate: '/orcamentos',
-      index: 15,
+      index: 16,
       dropdown: true,
     },
     {
@@ -162,7 +171,7 @@ import IconDashboard from '../icons/IconDashboard'
       dropIcon: UilAngleDown,
       heading: 'Ordem de serviço',
       navigate: '/ordem-de-servico',
-      index: 16,
+      index: 17,
       dropdown: true,
     },
     
@@ -638,5 +647,13 @@ import IconDashboard from '../icons/IconDashboard'
     },
   ]
   
-  
+  export const InvoiceData = [
+    {
+      numPedido: '115',
+      codNf: '2131',
+      cfop: '6.123',
+      dataEmissao: '07/04',
+      status:'active'
+    },
+  ]
   

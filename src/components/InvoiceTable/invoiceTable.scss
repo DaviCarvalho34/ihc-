@@ -1,0 +1,70 @@
+.table-container {
+
+    margin-top: 2rem;
+  
+    .MuiTableCell-head {
+      
+    }
+    .MuiPaper-root {
+     
+    }
+    
+    img {
+      width: 60px;
+      height: 60px;
+    }
+  
+    .statusProductActive {
+      background:rgb(145 254 159 / 47%);
+      color:green;
+      display: flex;
+      width: 80px;
+      height: 30px;
+      border-radius: 3rem;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .statusProductInactive {
+      background: #ffadad8f;
+       color:red;
+       display: flex;
+        width: 80px;
+        height: 30px;
+        border-radius: 3rem;
+        align-items: center;
+        justify-content: center;
+    }
+  
+    .actions {
+      display: flex;
+      justify-content: flex-start;
+  
+      .edit {
+        margin-right: 2rem;
+        background-color: #3F3CD7;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #9391f5;
+        cursor: pointer;
+      }
+  
+      .delete{
+        width: 30px;
+        height: 30px;
+        background: #fd98988f;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: red;
+        cursor: pointer;
+      }
+    }
+  }
+  
+  
