@@ -20,6 +20,7 @@ import {
   import { UilBill } from '@iconscout/react-unicons'
   import { UilInvoice } from '@iconscout/react-unicons'
   import { UilFileGraph } from '@iconscout/react-unicons'
+  import { UilLockAccess } from '@iconscout/react-unicons'
   
   // Analytics Cards imports
   import { UilUsdSquare, UilMoneyWithdrawal } from '@iconscout/react-unicons'
@@ -187,6 +188,14 @@ import {
       heading: 'Relatórios',
       navigate: '/relatorios',
       index: 19,
+      dropdown: true,
+    },
+    {
+      icon: UilLockAccess,
+      dropIcon: UilAngleDown,
+      heading: 'Fechamento de caixa',
+      navigate: '/fechamento-caixa',
+      index: 20,
       dropdown: true,
     },
     
@@ -670,4 +679,32 @@ import {
       status:'active'
     },
   ]
+
+  export const ReportsData = [
+    {
+      id: '115',
+      titulo: 'Extrato de venda semestral',
+      tabela: 'Vendas',
+      data: '07/04',
+    },
+  ]
+
+  export const CashierData = [
+    {
+      cod: '115',
+      atendente: 'Marcos',
+      data: '07/04',
+      hora: '17:30',
+      status: 'active'
+    },
+    {
+      cod: '114',
+      atendente: 'Davi',
+      data: '08/04',
+      hora: '17:30',
+      status: 'inactive'
+    },
+  ]
+  
+  
   

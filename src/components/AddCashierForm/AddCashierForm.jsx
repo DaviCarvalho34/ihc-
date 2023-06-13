@@ -3,7 +3,7 @@ import CustomTextArea from '../CustomTextArea/CustomTextArea';
 import CustomInput from '../customInput/CustomInput';
 import CustomSelect from '../CustomSelect/CustomSelect';
 import InputNumber from '../customInput/InputNumber';
-import './addReportForm.scss';
+import './addCashierForm.scss';
 import Switch from '@mui/material/Switch';
 import DragDrop from '../dragDrop/DragDrop';
 import { ImageUpload } from '../ImageUpload/ImageUpload';
@@ -13,7 +13,7 @@ import ColorCheckboxes from '../Checkbox/Checkbox';
 
 
 
-export default function AddReportForm() {
+export default function AddCashierForm() {
 
   const onUpload = (files) => {
     console.log(files);
@@ -23,20 +23,22 @@ export default function AddReportForm() {
    
      <div className="AddCategoryForm">
         <div className="formHead">
-          <h2>Relatório</h2>
+          <h2>Fechar Caixa</h2>
         </div>
         
         <div className="formContainer">
          
             <div className="row"> 
-                <CustomInput name="Título do relatório" />           
-              <CustomSelect name="Selecione a tabela" op1="Caixa" op2="Vendas online" op3="Funcionários" op4="Transportadoras" op5="Clientes" />
-              <CustomSelect name="Filtrar relatório" op1="Última semana" op2="Últimos 30 dias" op3="Último trimestre" op4="Último semestre" op5="Último ano" />
+                <CustomInput name="Código" />           
+              <CustomSelect name="Atendente" op1="atendente-1" op2="atendente-1" op3="atendente-1" op4="atendente-1" op5="atendente-1" />
+              <CustomInput name="Entrada ($)" />
+              <CustomInput name="Saída ($)" />
             </div>
 
               
             <div className="row">
-              <CustomTextArea name="Description"/>
+                <CustomInput name="Data fechamento" />  
+              <CustomInput name="Hora fechamento" /> 
             </div>           
         </div>
         

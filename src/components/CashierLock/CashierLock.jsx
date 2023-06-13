@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from 'framer-motion';
 import ProductsTable  from "../productsTable/ProductsTable";
-import './report.scss';
+import './cashierLock.scss';
 import { Box, Modal } from "@mui/material";
 import AddProductForm from "../AddProductForm/AddProductForm";
 import { UilMultiply } from '@iconscout/react-unicons'
@@ -14,9 +14,11 @@ import TaxOperationsTable from "../TaxOperationsTable/TaxOperationsTable";
 import AddGrForm from "../AddGrForm/AddGrForm";
 import AddReportForm from "../AddReportForm/AddReportForm";
 import ReportsTable from "../ReportTable/ReportsTable";
+import AddCashierForm from "../AddCashierForm/AddCashierForm";
+import CashierLockTable from "../CashierLockTable/CashierLockTable";
 
 
-export const Report = () => {
+export const CashierLock = () => {
 
     const [open, setOpen] = useState(false);
     const [open1, setOpen1] = useState(false);
@@ -24,17 +26,17 @@ export const Report = () => {
     return (
         <motion.div className="Products" initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}}>
             
-            <h1 className="titleDash">Gerar relatórios</h1>
+            <h1 className="titleDash">Fechamento de caixa</h1>
             <div className="button-container">
                 <div className="add-products" onClick={()=>{
                 setOpen(true);
                 }}>
-                    <h4>Novo Relatório</h4>
+                    <h4>Iniciar fechamento</h4>
                 </div>
                
             </div>
             <div className="table-container">
-                <ReportsTable />
+                <CashierLockTable />
             </div>
 
             <div className="modalContainer">
@@ -48,7 +50,7 @@ export const Report = () => {
                     <UilMultiply onClick={()=>{
                     setOpen(false);
                 }} />
-                    <AddReportForm />
+                    <AddCashierForm />
                     <input type="submit" className="save" value="Gerar extrato" />
                 </Box>
             </Modal>

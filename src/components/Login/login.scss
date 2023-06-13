@@ -1,56 +1,4 @@
-:root {
-    --main-white-color: #FFFEFF;
-    --main-bg-color: #04BF9D;
-    --main-primary-color: #027373;
-    --main-light-color: #5FCDD9;
-    --main-dark-color:  #26343d;
-    --main-darker-color: #172026;
-    --glass: rgba(255, 255, 255, 0.54);
-  }
-  
-  *{
-    margin: 0;
-    padding: 0;
-    font-family: 'inter', sans-serif;
-  }
-  
-  .App {
-    color: var(--black);
-    background: rgb(253, 252, 252);
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .logout {
-      position: fixed;
-      top: 8px;
-      left: 95%;
-    }
-  
-    .text {
-      position: absolute;
-    }
-    
-    .AppGlass{
-      display: grid;
-      position: relative;
-      height: 90vh;
-      width: 97%;
-      border-radius: 2rem;
-      background: rgba(255, 255, 255, 0.34);
-      border-radius: 16px;
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-      //backdrop-filter: blur(5.9px);
-      -webkit-backdrop-filter: blur(5.9px);
-      overflow: hidden;
-      grid-template-columns: 14rem auto 25rem;
-      gap: 10px;
-      overflow-y: scroll;
-      
-    }
-  }
-
-  .Login{
+.Login{
     width: 100%;
     color: var(--black);
     background: rgb(253, 252, 252);
@@ -121,24 +69,3 @@
       }
     }
 }
-  
-  @media screen and (max-width: 1200px) {
-    .AppGlass{
-      grid-template-columns: 10% 50% auto!important;
-      overflow-y: scroll!important;
-    } 
-  }
-  
-  @media screen and (max-width: 768px) {
-    .AppGlass{
-      grid-template-columns: 1fr!important;
-      align-items: center;
-    } 
-    
-  
-    .AppGlass::-webkit-scrollbar {
-      display: none;
-    }
-  }
-  
-  
