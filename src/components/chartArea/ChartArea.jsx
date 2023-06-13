@@ -2,6 +2,7 @@ import { Table } from '@mui/material';
 import './chartArea.scss';
 import Chart from 'react-apexcharts';
 import BasicTable from '../table/Table';
+import ServicesTable from '../ServicesTable/ServicesTable';
 
 export const ChartArea = () => {
 
@@ -63,7 +64,7 @@ export const ChartArea = () => {
     return(
         <div className="ChartArea">
 
-            <BasicTable /> 
+            <ServicesTable />
 
         </div>
     )

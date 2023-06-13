@@ -13,6 +13,11 @@ import {
   import { UilTruck } from '@iconscout/react-unicons'
   import { UilBuilding } from '@iconscout/react-unicons'
   import { UilMoneyStack } from '@iconscout/react-unicons'
+  import { UilCalender } from '@iconscout/react-unicons'
+  import { UilConstructor } from '@iconscout/react-unicons'
+  import { UilAmazon } from '@iconscout/react-unicons'
+  import { UilFileContractDollar } from '@iconscout/react-unicons'
+  import { UilBill } from '@iconscout/react-unicons'
   
   
   
@@ -37,8 +42,8 @@ import IconDashboard from '../icons/IconDashboard'
     },
     {
       icon: UilClipboardAlt,
-      heading: 'Pedidos',
-      navigate: '/pedidos',
+      heading: 'Posição de venda',
+      navigate: '/posicao-de-venda',
       index: 1,
       dropdown: false
     },
@@ -110,6 +115,54 @@ import IconDashboard from '../icons/IconDashboard'
       heading: 'Operações fiscais',
       navigate: '/operacoes-fiscais',
       index: 10,
+      dropdown: true,
+    },
+    {
+      icon: UilCalender,
+      dropIcon: UilAngleDown,
+      heading: 'Plano de contas',
+      navigate: '/plano-de-contas',
+      index: 11,
+      dropdown: true,
+    },
+    {
+      icon: UilConstructor,
+      dropIcon: UilAngleDown,
+      heading: 'Serviços',
+      navigate: '/servicos',
+      index: 12,
+      dropdown: true,
+    },
+    {
+      icon: UilUsdSquare,
+      dropIcon: UilAngleDown,
+      heading: 'Movimentação finaceira',
+      navigate: '/movimentacao-financeira',
+      index: 13,
+      dropdown: true,
+    },
+    {
+      icon: UilAmazon,
+      dropIcon: UilAngleDown,
+      heading: 'Ecommerce',
+      navigate: '/ecommerce',
+      index: 14,
+      dropdown: true,
+    },
+    {
+      icon: UilFileContractDollar,
+      dropIcon: UilAngleDown,
+      heading: 'Orçamentos',
+      navigate: '/orcamentos',
+      index: 15,
+      dropdown: true,
+    },
+    {
+      icon: UilBill,
+      dropIcon: UilAngleDown,
+      heading: 'Ordem de serviço',
+      navigate: '/ordem-de-servico',
+      index: 16,
       dropdown: true,
     },
     
@@ -393,6 +446,197 @@ import IconDashboard from '../icons/IconDashboard'
     },
   ]
   
+  export const TaxOperationData = [
+    {
+      cfop: '1101',
+      natureName: 'Lorem ipsum',
+      gerarFaturamento: 'sim',
+      gerarEstoque: 'não'
+    },
+    {
+      cfop: '1101',
+      natureName: 'Lorem ipsum',
+      gerarFaturamento: 'sim',
+      gerarEstoque: 'não'
+    },
+    {
+      cfop: '1101',
+      natureName: 'Lorem ipsum',
+      gerarFaturamento: 'sim',
+      gerarEstoque: 'não'
+    },
+    {
+      cfop: '1101',
+      natureName: 'Lorem ipsum',
+      gerarFaturamento: 'sim',
+      gerarEstoque: 'não'
+    },
+  ]
+
+  export const AccountsData = [
+    {
+      codigo: '115',
+      codigoExtendido: '115468',
+      grupo: 'Despesas',
+      descricao: 'Lorem Ipsum'
+    },
+    {
+      codigo: '115',
+      codigoExtendido: '115468',
+      grupo: 'Despesas',
+      descricao: 'Lorem Ipsum'
+    },
+    {
+      codigo: '115',
+      codigoExtendido: '115468',
+      grupo: 'Despesas',
+      descricao: 'Lorem Ipsum'
+    },
+    {
+      codigo: '115',
+      codigoExtendido: '115468',
+      grupo: 'Despesas',
+      descricao: 'Lorem Ipsum'
+    },
+  ]
+
+  export const ServicesData = [
+    {
+      codigo: '115',
+      unidade: 'Ocorrências',
+      valor: '$25.000',
+      descricao: 'Lorem Ipsum'
+    },
+    {
+      codigo: '115',
+      unidade: 'Ocorrências',
+      valor: '$25.000',
+      descricao: 'Lorem Ipsum'
+    },
+    {
+      codigo: '115',
+      unidade: 'Ocorrências',
+      valor: '$25.000',
+      descricao: 'Lorem Ipsum'
+    },
+    {
+      codigo: '115',
+      unidade: 'Ocorrências',
+      valor: '$25.000',
+      descricao: 'Lorem Ipsum'
+    },
+  ]
+
+  export const OrdersData = [
+    {
+      productImage: 'https://http2.mlstatic.com/D_NQ_NP_626921-MLB51033775318_082022-O.webp',
+      productName: 'Macbook Pro ',
+      price: 15.900,
+      nomeCliente: 'Davi',
+      entrega: 'entregue'
+    },
+    {
+      productImage: 'https://http2.mlstatic.com/D_NQ_NP_626921-MLB51033775318_082022-O.webp',
+      productName: 'Macbook Pro ',
+      price: 15.900,
+      nomeCliente: 'João',
+      entrega: 'a caminho'
+    },
+    {
+      productImage: 'https://http2.mlstatic.com/D_NQ_NP_626921-MLB51033775318_082022-O.webp',
+      productName: 'Macbook Pro ',
+      price: 15.900,
+      nomeCliente: 'Marcos',
+      entrega: 'retirado'
+    },
+    {
+      productImage: 'https://http2.mlstatic.com/D_NQ_NP_626921-MLB51033775318_082022-O.webp',
+      productName: 'Macbook Pro ',
+      price: 15.900,
+      nomeCliente: 'Felipe',
+      entrega: 'entregue'
+    },
+  ]
+
+  export const EcommerceData = [
+    {
+      productImage: 'https://venngage-wordpress-pt.s3.amazonaws.com/uploads/2020/03/loja-virtual-1.png',
+      productName: 'Loja 1',
+      idApp: '122',
+      idUser: '56',
+      status: 'active'
+    },
+  ]
+
+  export const BudgetsData = [
+    {
+      codigo: '115',
+      descricao: 'placa de video',
+      un: 'pc',
+      qtd: 1,
+      precoUnitario: 250,
+      valorTotal:250
+    },
+    {
+      codigo: '115',
+      descricao: 'placa de video',
+      un: 'pc',
+      qtd: 1,
+      precoUnitario: 250,
+      valorTotal:250
+    },
+    {
+      codigo: '115',
+      descricao: 'placa de video',
+      un: 'pc',
+      qtd: 1,
+      precoUnitario: 250,
+      valorTotal:250
+    },
+    {
+      codigo: '115',
+      descricao: 'placa de video',
+      un: 'pc',
+      qtd: 1,
+      precoUnitario: 250,
+      valorTotal:250
+    },
+  ]
+
+  export const ServiceOrderData = [
+    {
+      codigo: '115',
+      codNf: '2131',
+      tec: 'Davi',
+      descricao: 'lorem ipsum',
+      dataEntrada: 250,
+      status:'active'
+    },
+    {
+      codigo: '115',
+      codNf: '2131',
+      tec: 'Davi',
+      descricao: 'lorem ipsum',
+      dataEntrada: 250,
+      status:'active'
+    },
+    {
+      codigo: '115',
+      codNf: '2131',
+      tec: 'Davi',
+      descricao: 'lorem ipsum',
+      dataEntrada: 250,
+      status:'active'
+    },
+    {
+      codigo: '115',
+      codNf: '2131',
+      tec: 'Davi',
+      descricao: 'lorem ipsum',
+      dataEntrada: 250,
+      status:'active'
+    },
+  ]
   
   
   

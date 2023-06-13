@@ -1,8 +1,8 @@
-import { TaxOperationData } from '../../Data/Data';
+import { AccountsData } from '../../Data/Data';
 import MUIDataTable from "mui-datatables";
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
-import './taxOperationTable.scss';
+import './accountTable.scss';
 import { useState } from 'react';
 import { Box, Modal } from '@mui/material';
 import { UilMultiply } from '@iconscout/react-unicons'
@@ -10,13 +10,13 @@ import AddProductForm from '../AddProductForm/AddProductForm';
 import AddEmployeeForm from '../AddEmployeeForm/AddEmployeeForm';
 import AddSuplierForm from '../AddSupliersForm/AddSupliersForm';
 
-function createData(cfop, natureName, gerarFaturamento, gerarEstoque, actions) {
-    return { cfop, natureName, gerarFaturamento, gerarEstoque, actions };
+function createData(codigo, codigoExtendido, grupo, descricao, actions) {
+    return { codigo, codigoExtendido, grupo, descricao, actions };
 }
 
 const rows =  
-    TaxOperationData.map((item,index)=>{
-    return createData(item.cfop, item.natureName, item.gerarFaturamento, item.gerarEstoque,(()=>{
+    AccountsData.map((item,index)=>{
+    return createData(item.codigo, item.codigoExtendido, item.grupo, item.descricao,(()=>{
       const [open, setOpen] = useState(false);
       return (
       <div className="actions">
@@ -54,8 +54,8 @@ const rows =
 
   const columns = [
     {
-     name: "cfop",
-     label: "CFOP",
+     name: "codigo",
+     label: "codigo",
      
      options: {
       filter: true,
@@ -63,16 +63,16 @@ const rows =
      }
     },
     {
-     name: "natureName",
-     label: "natureza",
+     name: "codigoExtendido",
+     label: "codigoEx",
      options: {
       filter: true,
       sort: false,
      }
     },
     {
-     name: "gerarFaturamento",
-     label: "gerar faturamento",
+     name: "grupo",
+     label: "grupo",
      options: {
       filter: true,
       sort: false,
@@ -80,8 +80,8 @@ const rows =
     },
     
     {
-     name: "gerarEstoque",
-     label: "gerarEstoque",
+     name: "descricao",
+     label: "descrição",
      options: {
       filter: true,
       sort: false,
@@ -103,12 +103,12 @@ const rows =
         rowsPerPageOptions: [4, 10, 20, 50],
     };
 
-export default function TaxOperationsTable({title}) {
+export default function AccountTable({title}) {
 
     return (
       
         <MUIDataTable
-            title="operações fiscais"
+            title="plano de contas"
             data={rows}
             columns={columns}
             options={options}

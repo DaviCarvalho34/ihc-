@@ -66,5 +66,43 @@
       }
     }
   }
+
+  @media screen and (max-width: 1500px){
+    .MuiTable-root{
+      img {
+        height: 80px!important;
+        width: 80px!important;
+      }
+    }
+  }
+
+
+  @media screen and (max-width: 1280px){
+    .MuiTable-root{
+      img {
+        height: 50px!important;
+        width: 50px!important;
+      }
+    }
+
+    .table-container {
+      
+      
+      height: 80%;
+    }
+
+    .actions {
+      .edit {
+        margin-right: 0.5rem!important;
+        width: 25px!important;
+        height: 25px!important;
+      }
+      .delete {
+        width: 25px!important;
+        height: 25px!important;
+      }
+    }
+  }
+
   
   

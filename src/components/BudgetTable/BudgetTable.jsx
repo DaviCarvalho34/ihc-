@@ -1,8 +1,8 @@
-import { TaxOperationData } from '../../Data/Data';
+import { BudgetsData } from '../../Data/Data';
 import MUIDataTable from "mui-datatables";
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
-import './taxOperationTable.scss';
+import './budgetTable.scss';
 import { useState } from 'react';
 import { Box, Modal } from '@mui/material';
 import { UilMultiply } from '@iconscout/react-unicons'
@@ -10,13 +10,13 @@ import AddProductForm from '../AddProductForm/AddProductForm';
 import AddEmployeeForm from '../AddEmployeeForm/AddEmployeeForm';
 import AddSuplierForm from '../AddSupliersForm/AddSupliersForm';
 
-function createData(cfop, natureName, gerarFaturamento, gerarEstoque, actions) {
-    return { cfop, natureName, gerarFaturamento, gerarEstoque, actions };
+function createData(codigo, descricao, un,qtd, precoUnitario,valorTotal, actions) {
+    return { codigo, descricao, un,qtd, precoUnitario,valorTotal, actions };
 }
 
 const rows =  
-    TaxOperationData.map((item,index)=>{
-    return createData(item.cfop, item.natureName, item.gerarFaturamento, item.gerarEstoque,(()=>{
+    BudgetsData.map((item,index)=>{
+    return createData(item.codigo, item.descricao, item.un, item.qtd, item.precoUnitario,item.valorTotal,(()=>{
       const [open, setOpen] = useState(false);
       return (
       <div className="actions">
@@ -54,8 +54,8 @@ const rows =
 
   const columns = [
     {
-     name: "cfop",
-     label: "CFOP",
+     name: "codigo",
+     label: "codigo",
      
      options: {
       filter: true,
@@ -63,16 +63,16 @@ const rows =
      }
     },
     {
-     name: "natureName",
-     label: "natureza",
+     name: "descricao",
+     label: "descrição",
      options: {
       filter: true,
       sort: false,
      }
     },
     {
-     name: "gerarFaturamento",
-     label: "gerar faturamento",
+     name: "un",
+     label: "UN",
      options: {
       filter: true,
       sort: false,
@@ -80,12 +80,28 @@ const rows =
     },
     
     {
-     name: "gerarEstoque",
-     label: "gerarEstoque",
+     name: "qtd",
+     label: "qtd",
      options: {
       filter: true,
       sort: false,
      }
+    },
+    {
+        name: "precoUnitario",
+        label: "preço unitário",
+        options: {
+         filter: true,
+         sort: false,
+        }
+    },
+    {
+        name: "valorTotal",
+        label: "valor total",
+        options: {
+         filter: true,
+         sort: false,
+        }
     },
     {
       name: "actions",
@@ -103,12 +119,12 @@ const rows =
         rowsPerPageOptions: [4, 10, 20, 50],
     };
 
-export default function TaxOperationsTable({title}) {
+export default function BudgetTable({title}) {
 
     return (
       
         <MUIDataTable
-            title="operações fiscais"
+            title="orçamentos"
             data={rows}
             columns={columns}
             options={options}

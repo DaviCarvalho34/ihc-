@@ -4,4 +4,17 @@
     h1{
         margin-bottom: 1rem;
     }
+
+    .add-products {
+        width: 13rem;
+        height: 50px;
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 1rem;
+        cursor: pointer;
+        background: #7070FF;
+        color: #c1c0fd;
+      }
 }

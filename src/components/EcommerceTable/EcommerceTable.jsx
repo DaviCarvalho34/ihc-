@@ -1,22 +1,26 @@
-import { TaxOperationData } from '../../Data/Data';
+import { EcommerceData } from '../../Data/Data';
 import MUIDataTable from "mui-datatables";
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
-import './taxOperationTable.scss';
+import './ecommerceTable.scss'
 import { useState } from 'react';
 import { Box, Modal } from '@mui/material';
 import { UilMultiply } from '@iconscout/react-unicons'
 import AddProductForm from '../AddProductForm/AddProductForm';
-import AddEmployeeForm from '../AddEmployeeForm/AddEmployeeForm';
-import AddSuplierForm from '../AddSupliersForm/AddSupliersForm';
 
-function createData(cfop, natureName, gerarFaturamento, gerarEstoque, actions) {
-    return { cfop, natureName, gerarFaturamento, gerarEstoque, actions };
+function createData(productImage, productName, idApp, idUser, status, actions) {
+    return { productImage, productName, idApp, idUser, status, actions };
 }
 
 const rows =  
-    TaxOperationData.map((item,index)=>{
-    return createData(item.cfop, item.natureName, item.gerarFaturamento, item.gerarEstoque,(()=>{
+  EcommerceData.map((item,index)=>{
+    return createData(<img src={item.productImage} style={{width:'80px'}} alt="" />, item.productName, item.idApp, item.idUser, (()=>{
+      if(item.status === "inactive") {
+        return <span className="statusProductInactive">Inactive</span>
+      } else {
+        return <span className="statusProductActive">Active</span>
+      }
+    }),(()=>{
       const [open, setOpen] = useState(false);
       return (
       <div className="actions">
@@ -25,9 +29,7 @@ const rows =
             setOpen(true);
           }} />
         </div>
-        
         <div className="modalContainer">
-            
             <Modal
                 open={open}
                 onClose={()=>setOpen(false)}
@@ -38,7 +40,7 @@ const rows =
                     <UilMultiply onClick={()=>{
                     setOpen(false);
                 }} />
-                    <AddSuplierForm />
+                    <AddProductForm />
                     <input type="submit" className="save" value="Save" />
                 </Box>
             </Modal>
@@ -52,10 +54,27 @@ const rows =
     }));
   });
 
+  const makeStyle=(status)=>{
+    if(status === 'inactive')
+    {
+      return {
+        background: '#ffadad8f',
+        color: 'red',
+      }
+    }
+    else
+    {
+      return{
+        background: 'rgb(145 254 159 / 47%)',
+        color: 'green',
+      }
+    }
+  }
+
   const columns = [
     {
-     name: "cfop",
-     label: "CFOP",
+     name: "productImage",
+     label: "image",
      
      options: {
       filter: true,
@@ -63,25 +82,32 @@ const rows =
      }
     },
     {
-     name: "natureName",
-     label: "natureza",
+     name: "productName",
+     label: "name",
      options: {
       filter: true,
       sort: false,
      }
     },
     {
-     name: "gerarFaturamento",
-     label: "gerar faturamento",
+     name: "idApp",
+     label: "id app",
      options: {
       filter: true,
       sort: false,
      }
     },
-    
     {
-     name: "gerarEstoque",
-     label: "gerarEstoque",
+     name: "idUser",
+     label: "id user",
+     options: {
+      filter: true,
+      sort: false,
+     }
+    },
+    {
+     name: "status",
+     label: "status",
      options: {
       filter: true,
       sort: false,
@@ -103,12 +129,12 @@ const rows =
         rowsPerPageOptions: [4, 10, 20, 50],
     };
 
-export default function TaxOperationsTable({title}) {
+export default function EcommerceTable() {
 
     return (
       
         <MUIDataTable
-            title="operações fiscais"
+            title={"Ecommerce"}
             data={rows}
             columns={columns}
             options={options}

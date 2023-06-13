@@ -1,33 +1,40 @@
 import { useState } from "react";
 import { motion } from 'framer-motion';
 import ProductsTable  from "../productsTable/ProductsTable";
-import './taxOperations.scss';
-import { Box, Modal } from "@mui/material";
+import './serviceOrder.scss';
+import { Box, Modal, Tab, Tabs, Typography } from "@mui/material";
 import AddProductForm from "../AddProductForm/AddProductForm";
-import { UilMultiply } from '@iconscout/react-unicons'
-import EmployeesTable from "../employeesTable/EmployeesTable";
-import AddEmployeeForm from "../AddEmployeeForm/AddEmployeeForm";
-import SupliersTable from "../SupliersTable/SupliersTable";
-import AddSuplierForm from "../AddSupliersForm/AddSupliersForm";
-import AddTaxOperationForm from "../AddTaxOperationForm/AddTaxOperationForm";
-import TaxOperationsTable from "../TaxOperationsTable/TaxOperationsTable";
+import { UilMultiply } from '@iconscout/react-unicons';
+import PropTypes from 'prop-types';
+import AddBudgetForm from "../AddBudgetForm/AddBudgetForm";
+import BudgetTable from "../BudgetTable/BudgetTable";
+import AddServiceOrderForm from "../AddServiceOrderForm/AddServiceOrderForm";
+import ServiceOrderTable from "../ServiceOrderTable/ServiceOrderTable";
 
 
-export const TaxOperations = () => {
+
+export const ServiceOrder = () => {
 
     const [open, setOpen] = useState(false);
+
+    const [value, setValue] = useState(0);
+
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
+
 
     return (
         <motion.div className="Products" initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}}>
             
-            <h1 className="titleDash">Operações fiscais</h1>
+            <h1 className="titleDash">Ordem de serviço</h1>
             <div className="add-products" onClick={()=>{
             setOpen(true);
             }}>
-            <h4>Nova operação</h4>
+            <h4>Nova ordem</h4>
             </div>
             <div className="table-container">
-                <TaxOperationsTable />
+                <ServiceOrderTable />
             </div>
 
             <div className="modalContainer">
@@ -37,13 +44,17 @@ export const TaxOperations = () => {
                 aria-labelledby="parent-modal-title"
                 aria-describedby="parent-modal-description"
             >
+                
                 <Box sx={{width: 600, padding: 3 }}>
+                
                     <UilMultiply onClick={()=>{
                     setOpen(false);
                 }} />
-                    <AddTaxOperationForm />
-                    <input type="submit" className="save" value="Save" />
+                    <AddServiceOrderForm />
+                    
+                    <input type="submit" className="save" value="Salvar" />
                 </Box>
+                
             </Modal>
             </div>
 

@@ -1,8 +1,8 @@
-import { TaxOperationData } from '../../Data/Data';
+import { ServiceOrderData } from '../../Data/Data';
 import MUIDataTable from "mui-datatables";
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
-import './taxOperationTable.scss';
+import './serviceOrderTable.scss';
 import { useState } from 'react';
 import { Box, Modal } from '@mui/material';
 import { UilMultiply } from '@iconscout/react-unicons'
@@ -10,13 +10,19 @@ import AddProductForm from '../AddProductForm/AddProductForm';
 import AddEmployeeForm from '../AddEmployeeForm/AddEmployeeForm';
 import AddSuplierForm from '../AddSupliersForm/AddSupliersForm';
 
-function createData(cfop, natureName, gerarFaturamento, gerarEstoque, actions) {
-    return { cfop, natureName, gerarFaturamento, gerarEstoque, actions };
+function createData(codigo, codNf, tec, descricao, dataEntrada,status, actions) {
+    return { codigo, codNf, tec, descricao, dataEntrada,status, actions };
 }
 
 const rows =  
-    TaxOperationData.map((item,index)=>{
-    return createData(item.cfop, item.natureName, item.gerarFaturamento, item.gerarEstoque,(()=>{
+    ServiceOrderData.map((item,index)=>{
+    return createData(item.codigo, item.codNf, item.tec, item.descricao, item.dataEntrada,(()=>{
+        if(item.status === "inactive") {
+          return <span className="statusProductInactive">Andamento</span>
+        } else {
+          return <span className="statusProductActive">Concertado</span>
+        }
+      }),(()=>{
       const [open, setOpen] = useState(false);
       return (
       <div className="actions">
@@ -54,8 +60,8 @@ const rows =
 
   const columns = [
     {
-     name: "cfop",
-     label: "CFOP",
+     name: "codigo",
+     label: "codigo",
      
      options: {
       filter: true,
@@ -63,16 +69,16 @@ const rows =
      }
     },
     {
-     name: "natureName",
-     label: "natureza",
+     name: "codNf",
+     label: "cod nota fiscal",
      options: {
       filter: true,
       sort: false,
      }
     },
     {
-     name: "gerarFaturamento",
-     label: "gerar faturamento",
+     name: "tec",
+     label: "tecnico",
      options: {
       filter: true,
       sort: false,
@@ -80,12 +86,28 @@ const rows =
     },
     
     {
-     name: "gerarEstoque",
-     label: "gerarEstoque",
+     name: "descricao",
+     label: "descrição",
      options: {
       filter: true,
       sort: false,
      }
+    },
+    {
+        name: "dataEntrada",
+        label: "data entrada",
+        options: {
+         filter: true,
+         sort: false,
+        }
+    },
+    {
+        name: "status",
+        label: "status",
+        options: {
+         filter: true,
+         sort: false,
+        }
     },
     {
       name: "actions",
@@ -103,12 +125,12 @@ const rows =
         rowsPerPageOptions: [4, 10, 20, 50],
     };
 
-export default function TaxOperationsTable({title}) {
+export default function ServiceOrderTable({title}) {
 
     return (
       
         <MUIDataTable
-            title="operações fiscais"
+            title="ordem de serviço"
             data={rows}
             columns={columns}
             options={options}

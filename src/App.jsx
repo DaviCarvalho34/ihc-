@@ -13,6 +13,12 @@ import { Clients } from './components/Clients/Clients';
 import { Carriers } from './components/carriers/Carriers';
 import { Companies } from './components/Companies/Companies';
 import { TaxOperations } from './components/TaxOperations/TaxOperations';
+import { Accounts } from './components/Accounts/Accounts';
+import { Services } from './components/Services/Services';
+import { Orders } from './components/Orders/Orders';
+import { Ecommerce } from './components/Ecommerce/Ecommerce';
+import { Budget } from './components/Budget/Budget';
+import { ServiceOrder } from './components/ServiceOrder/ServiceOrder';
 
 function App() {
   
@@ -24,6 +30,7 @@ function App() {
           <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Dashboard />} />
           <Route path="/produtos" element={<Products />} />
+          <Route path="/posicao-de-venda" element={<Orders />} />
           <Route path="/categorias" element={<Categories />} />
           <Route path="/usuarios" element={<Customers />} />
           <Route path="/funcionarios" element={<Employees />} />
@@ -32,6 +39,11 @@ function App() {
           <Route path="/transportadoras" element={<Carriers />} />
           <Route path="/empresas" element={<Companies />} />
           <Route path="/operacoes-fiscais" element={<TaxOperations />} />
+          <Route path="/plano-de-contas" element={<Accounts />} />
+          <Route path="/servicos" element={<Services />} />
+          <Route path="/ecommerce" element={<Ecommerce />} />
+          <Route path="/orcamentos" element={<Budget />} />
+          <Route path="/ordem-de-servico" element={<ServiceOrder />} />
         </Routes>
         </Router>      
           <RightSide />

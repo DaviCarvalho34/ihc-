@@ -1,0 +1,53 @@
+.AddProductForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+
+    .MuiTabs-root {
+      margin-top: -19px;
+      margin-bottom: 10px;
+    
+    }
+
+    .css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
+      color: #fff;
+    }
+
+    .css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
+      color:#b087fd;
+    }
+
+    .css-1aquho2-MuiTabs-indicator {
+      background-color: #b087fd!important;
+    }
+    
+    .formHead {
+  
+      h2 {
+        color: #b087fd;
+      }
+  
+    }
+  
+    .formContainer {
+      display: flex;
+      flex-direction: column;
+      h2 {
+        color: #b087fd;
+        margin-top: -32px;
+      }
+      
+      .row {
+        display: flex;
+        margin-bottom: 5px;
+        gap: 5%;
+      }
+      .rowImage{
+        display: flex;
+        width: 100%;
+        
+      }
+    }
+  }
