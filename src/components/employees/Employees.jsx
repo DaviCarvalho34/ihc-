@@ -16,11 +16,11 @@ export const Employees = () => {
     return (
         <motion.div className="Products" initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}}>
             
-            <h1 className="titleDash">Employees</h1>
+            <h1 className="titleDash">Funcionários</h1>
             <div className="add-products" onClick={()=>{
             setOpen(true);
             }}>
-            <h4>Add a new employee</h4>
+            <h4>Novo funcionário</h4>
             </div>
             <div className="table-container">
                 <EmployeesTable />
@@ -38,7 +38,7 @@ export const Employees = () => {
                     setOpen(false);
                 }} />
                     <AddEmployeeForm />
-                    <input type="submit" className="save" value="Save" />
+                    <input type="submit" className="save" value="Salvar" />
                 </Box>
             </Modal>
             </div>

@@ -41,7 +41,7 @@ export const Companies = () => {
                     setOpen(false);
                 }} />
                     <AddCompanyForm />
-                    <input type="submit" className="save" value="Save" />
+                    <input type="submit" className="save" value="Salvar" />
                 </Box>
             </Modal>
             </div>

@@ -15,11 +15,11 @@ export const Categories = () => {
     return (
         <motion.div className="Categories" initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}}>
             
-            <h1 className="titleDash">Categories</h1>
+            <h1 className="titleDash">Categorias</h1>
             <div className="add-products" onClick={()=>{
             setOpen(true);
             }}>
-            <h4>Add a new category</h4>
+            <h4>Nova Categoria</h4>
             </div>
             <div className="table-container">
                 <CategoryTable />
@@ -37,7 +37,7 @@ export const Categories = () => {
                     setOpen(false);
                 }} />
                     <AddCategoryForm />
-                    <input type="submit" className="save" value="Save" />
+                    <input type="submit" className="save" value="Salvar" />
                 </Box>
             </Modal>
             </div>

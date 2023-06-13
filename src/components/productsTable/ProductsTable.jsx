@@ -74,7 +74,7 @@ const rows =
   const columns = [
     {
      name: "productImage",
-     label: "image",
+     label: "foto",
      
      options: {
       filter: true,
@@ -83,7 +83,7 @@ const rows =
     },
     {
      name: "productName",
-     label: "name",
+     label: "nome",
      options: {
       filter: true,
       sort: false,
@@ -91,7 +91,7 @@ const rows =
     },
     {
      name: "price",
-     label: "price",
+     label: "preço",
      options: {
       filter: true,
       sort: false,
@@ -99,7 +99,7 @@ const rows =
     },
     {
      name: "category",
-     label: "category",
+     label: "categoria",
      options: {
       filter: true,
       sort: false,
@@ -115,7 +115,7 @@ const rows =
     },
     {
       name: "actions",
-      label: "actions",
+      label: "ações",
       options: {
        filter: true,
        sort: false,
@@ -134,7 +134,7 @@ export default function ProductsTable() {
     return (
       
         <MUIDataTable
-            title={"Products"}
+            title={"Produtos"}
             data={rows}
             columns={columns}
             options={options}

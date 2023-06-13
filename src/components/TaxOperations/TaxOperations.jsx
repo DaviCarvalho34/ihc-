@@ -51,7 +51,7 @@ export const TaxOperations = () => {
                     setOpen(false);
                 }} />
                     <AddTaxOperationForm />
-                    <input type="submit" className="save" value="Save" />
+                    <input type="submit" className="save" value="Salvar" />
                 </Box>
             </Modal>
             </div>
@@ -68,7 +68,7 @@ export const TaxOperations = () => {
                     setOpen1(false);
                 }} />
                     <AddGrForm />
-                    <input type="submit" className="save" value="Save" />
+                    <input type="submit" className="save" value="Salvar" />
                 </Box>
             </Modal>
             </div>

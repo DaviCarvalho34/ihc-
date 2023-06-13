@@ -47,7 +47,7 @@ export const Services = () => {
                     setOpen(false);
                 }} />
                     <AddServicesForm />
-                    <input type="submit" className="save" value="Save" />
+                    <input type="submit" className="save" value="Salvar" />
                 </Box>
             </Modal>
             </div>

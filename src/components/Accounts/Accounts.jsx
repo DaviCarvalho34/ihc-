@@ -45,7 +45,7 @@ export const Accounts = () => {
                     setOpen(false);
                 }} />
                     <AddAccountForm/>
-                    <input type="submit" className="save" value="Save" />
+                    <input type="submit" className="save" value="Salvar" />
                 </Box>
             </Modal>
             </div>

@@ -203,7 +203,7 @@ import {
   
   export const CardsData = [
     {
-      title: 'Sales',
+      title: 'Entrada',
       color: {
         backGround:
         '#FFF5E0',
@@ -219,7 +219,7 @@ import {
       ]
     },
     {
-      title: 'Revenue',
+      title: 'Receita',
       color: {
         backGround:
           '#EFE6F6',
@@ -235,7 +235,7 @@ import {
       ]
     },
     {
-      title: 'Expenses',
+      title: 'Lucro',
       color: {
         backGround:
         '#E0F8EA',
@@ -255,21 +255,21 @@ import {
   export const UpdatesData = [
     {
       img: 'https://randomuser.me/api/portraits/women/94.jpg',
-      name: 'Ratazana ',
-      noti: 'comprou um brinco.',
-      time: '25 seconds ago'
+      name: 'Maria',
+      noti: ' comprou um laptop.',
+      time: 'Uma hora atrás'
     },
     {
       img: 'https://randomuser.me/api/portraits/men/34.jpg',
-      name: 'Homem Rinoplastia ',
-      noti: 'comprou um colar.',
-      time: '30 minutes ago'
+      name: 'Marcos',
+      noti: ' comprou um console.',
+      time: '30 minutos atrás'
     },
     {
       img: 'https://randomuser.me/api/portraits/men/27.jpg',
-      name: 'Davi ',
-      noti: 'lorem ipsum kkkk.',
-      time: '2 hours ago'
+      name: 'Davi',
+      noti: ' comprou um relógio',
+      time: 'duas horas atrás'
     }
   ]
 
@@ -278,28 +278,28 @@ import {
       productImage: 'https://http2.mlstatic.com/D_NQ_NP_626921-MLB51033775318_082022-O.webp',
       productName: 'Macbook Pro ',
       price: 15.900,
-      category: 'Colar',
+      category: 'laptops',
       status: 'active'
     },
     {
       productImage: 'https://http2.mlstatic.com/D_NQ_NP_605126-MLM51559383638_092022-O.webp',
       productName: 'Apple Iphone',
       price: 5000.00,
-      category: 'Anel',
+      category: 'smartphones',
       status: 'inactive'
     },
     {
       productImage: 'https://http2.mlstatic.com/D_NQ_NP_841787-MLA44484414455_012021-O.webp',
       productName: 'Sony PlayStation 5',
       price: 1500.00,
-      category: 'Brinco',
+      category: 'consoles',
       status: 'active'
     },
     {
       productImage: 'https://images-americanas.b2w.io/produtos/2116246256/imagens/relogio-inteligente-smartwatch-w34-s-preto-troca-pulseira-android-ios-ligacoes-monitor-cardiaco/2116246264_1_large.jpg',
       productName: 'SmartWatch W34 S',
       price: 1500.00,
-      category: 'Colar',
+      category: 'relógios',
       status: 'active'
     },
   ]
@@ -334,26 +334,26 @@ import {
   export const CustomersData = [
     {
       customerImage: 'https://randomuser.me/api/portraits/lego/5.jpg',
-      customerName: 'Laptops',
-      email: 'laptop-',
+      customerName: 'user 1',
+      email: 'd@com',
       cpf: 'active'
     },
     {
       customerImage: 'https://randomuser.me/api/portraits/men/4.jpg',
-      customerName: 'Laptops',
+      customerName: 'user 2',
       email: 'laptop-',
       cpf: 'active'
     },
     {
       customerImage: 'https://randomuser.me/api/portraits/men/16.jpg',
-      customerName: 'Laptops',
-      email: 'laptop-',
+      customerName: 'user 3',
+      email: 'd@com',
       cpf: 'active'
     },
     {
       customerImage: 'https://randomuser.me/api/portraits/women/74.jpg',
-      customerName: 'Laptops',
-      email: 'laptop-',
+      customerName: 'user 4',
+      email: 'd@com',
       cpf: 'active'
     },
   ]
@@ -361,26 +361,26 @@ import {
   export const EmployeesData = [
     {
       customerImage: 'https://randomuser.me/api/portraits/lego/0.jpg',
-      customerName: 'Laptops',
-      email: 'laptop-',
+      customerName: 'Mario',
+      email: 'mario@',
       cpf: 'active'
     },
     {
       customerImage: 'https://randomuser.me/api/portraits/lego/7.jpg',
-      customerName: 'Laptops',
-      email: 'laptop-',
+      customerName: 'Marcos',
+      email: 'marcos@',
       cpf: 'active'
     },
     {
       customerImage: 'https://randomuser.me/api/portraits/lego/2.jpg',
-      customerName: 'Laptops',
-      email: 'laptop-',
+      customerName: 'João',
+      email: 'joao@',
       cpf: 'active'
     },
     {
       customerImage: 'https://randomuser.me/api/portraits/lego/8.jpg',
-      customerName: 'Laptops',
-      email: 'laptop-',
+      customerName: 'Pedro',
+      email: 'pedro@',
       cpf: 'active'
     },
   ]

@@ -51,7 +51,7 @@ export const CashierLock = () => {
                     setOpen(false);
                 }} />
                     <AddCashierForm />
-                    <input type="submit" className="save" value="Gerar extrato" />
+                    <input type="submit" className="save" value="Fechar caixa" />
                 </Box>
             </Modal>
             </div>

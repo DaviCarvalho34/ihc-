@@ -23,11 +23,11 @@ export const Products = () => {
     return (
         <motion.div className="Products" initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}}>
             
-            <h1 className="titleDash">Products</h1>
+            <h1 className="titleDash">Produtos</h1>
             <div className="add-products" onClick={()=>{
             setOpen(true);
             }}>
-            <h4>Add a new product</h4>
+            <h4>Novo produto</h4>
             </div>
             <div className="table-container">
                 <ProductsTable />

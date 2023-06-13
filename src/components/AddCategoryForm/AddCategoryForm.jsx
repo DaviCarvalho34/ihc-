@@ -28,9 +28,9 @@ export default function AddCategoryForm() {
         <div className="formContainer">
          
             <div className="row">
-              <CustomInput name="category name"/>
-              <CustomInput name="category-slug"/>
-              <CustomInput name="keywords"/>
+              <CustomInput name="nome"/>
+              <CustomInput name="slug-categoria"/>
+              <CustomInput name="palavras chave"/>
               <CustomSelect name="status" />
             </div>
             <div className="row">             
@@ -44,7 +44,7 @@ export default function AddCategoryForm() {
               
             </div>
             <div className="row">
-              <CustomTextArea name="Description"/>
+              <CustomTextArea name="Descrição da categoria"/>
             </div>
             
             

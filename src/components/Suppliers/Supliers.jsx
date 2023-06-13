@@ -18,11 +18,11 @@ export const Supliers = () => {
     return (
         <motion.div className="Products" initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}}>
             
-            <h1 className="titleDash">Supliers</h1>
+            <h1 className="titleDash">Fornecedores</h1>
             <div className="add-products" onClick={()=>{
             setOpen(true);
             }}>
-            <h4>Add a new suplier</h4>
+            <h4>Novo fornecedor</h4>
             </div>
             <div className="table-container">
                 <SupliersTable />
@@ -40,7 +40,7 @@ export const Supliers = () => {
                     setOpen(false);
                 }} />
                     <AddSuplierForm />
-                    <input type="submit" className="save" value="Save" />
+                    <input type="submit" className="save" value="Salvar" />
                 </Box>
             </Modal>
             </div>
