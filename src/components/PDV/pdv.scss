@@ -1,0 +1,53 @@
+.Pdv {
+    width: 100%;
+    height: 88vh;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .pdvContainer {
+        width: 95%;
+        height: 95%;
+        background-image: linear-gradient(to right top, #3f28e7, #412ce2, #442fde, #4632d9, #4835d4);
+        padding: 20px;
+        border-color: transparent;
+        outline: 0;
+        border-radius: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+         h4 {
+            font-size: 2rem;
+            margin-top: 15px;
+         }
+
+         .info {
+            border: 1px dashed #fff;
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            span{
+                color: #968ce2;
+            }
+
+         }
+
+         .op {
+            display: flex;
+            margin-top: 10px;
+           
+            color: #fff;
+            justify-content: space-between;
+
+            .act {
+                background-color: #968ce2;
+                border-radius: 15px;
+                padding: 10px;
+            }
+         }
+    }
+
+    
+}

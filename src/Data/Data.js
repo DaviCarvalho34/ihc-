@@ -19,8 +19,7 @@ import {
   import { UilFileContractDollar } from '@iconscout/react-unicons'
   import { UilBill } from '@iconscout/react-unicons'
   import { UilInvoice } from '@iconscout/react-unicons'
-  
-  
+  import { UilFileGraph } from '@iconscout/react-unicons'
   
   // Analytics Cards imports
   import { UilUsdSquare, UilMoneyWithdrawal } from '@iconscout/react-unicons'
@@ -28,7 +27,7 @@ import {
   import { UilBag } from '@iconscout/react-unicons'
   import { ImportExport } from '@mui/icons-material'
   import { keyboard } from '@testing-library/user-event/dist/keyboard'
-import IconDashboard from '../icons/IconDashboard'
+  import IconDashboard from '../icons/IconDashboard'
   
  
   
@@ -174,7 +173,22 @@ import IconDashboard from '../icons/IconDashboard'
       index: 17,
       dropdown: true,
     },
-    
+    {
+      icon: UilChart,
+      dropIcon: UilAngleDown,
+      heading: 'PDV',
+      navigate: '/pdv',
+      index: 18,
+      dropdown: true,
+    },
+    {
+      icon: UilFileGraph,
+      dropIcon: UilAngleDown,
+      heading: 'Relatórios',
+      navigate: '/relatorios',
+      index: 19,
+      dropdown: true,
+    },
     
   ]
   

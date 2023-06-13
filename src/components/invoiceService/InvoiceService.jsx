@@ -13,6 +13,7 @@ import ServiceOrderTable from "../ServiceOrderTable/ServiceOrderTable";
 import AddInvoiceForm from "../AddInvoiceForm/AddInvoiceForm";
 import InvoiceTable from "../InvoiceTable/InvoiceTable";
 import AddNoteIssueForm from "../AddNoteIssueForm/AddNoteIssueForm";
+import AddServiceInvoiceForm from "../AddServiceInvoiceForm/AddServiceInvoiceForm";
 
 
 
@@ -31,18 +32,14 @@ export const InvoiceService = () => {
     return (
         <motion.div className="Products" initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}}>
             
-            <h1 className="titleDash">Notas fiscais</h1>
+            <h1 className="titleDash">Notas fiscais de serviço</h1>
             <div className="button-container">
                 <div className="add-products" onClick={()=>{
                 setOpen(true);
                 }}>
-                    <h4>Importar nota</h4>
+                    <h4>Nova NFs - e</h4>
                 </div>
-                <div className="add-products" onClick={()=>{
-                setOpen1(true);
-                }}>
-                    <h4>Emitir nota</h4>
-                </div>
+                
             </div>
             <div className="table-container">
                 <InvoiceTable />
@@ -61,7 +58,7 @@ export const InvoiceService = () => {
                     <UilMultiply onClick={()=>{
                     setOpen(false);
                 }} />
-                    <AddInvoiceForm />
+                    <AddServiceInvoiceForm />
                     
                     <input type="submit" className="save" value="Salvar" />
                 </Box>

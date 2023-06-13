@@ -20,6 +20,9 @@ import { Ecommerce } from './components/Ecommerce/Ecommerce';
 import { Budget } from './components/Budget/Budget';
 import { ServiceOrder } from './components/ServiceOrder/ServiceOrder';
 import { TaxInvoice } from './components/TaxInvoice/TaxInvoice';
+import { InvoiceService } from './components/invoiceService/InvoiceService';
+import { Pdv } from './components/PDV/Pdv';
+import { Report } from './components/Report/Report';
 
 function App() {
   
@@ -46,6 +49,9 @@ function App() {
           <Route path="/orcamentos" element={<Budget />} />
           <Route path="/ordem-de-servico" element={<ServiceOrder />} />
           <Route path="/notas-fiscais" element={<TaxInvoice />} />
+          <Route path="/notas-fiscais-servico" element={<InvoiceService />} />
+          <Route path="/pdv" element={<Pdv />} />
+          <Route path="/relatorios" element={<Report />} />
         </Routes>
         </Router>      
           <RightSide />
