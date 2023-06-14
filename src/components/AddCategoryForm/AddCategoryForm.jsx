@@ -22,7 +22,7 @@ export default function AddCategoryForm() {
    
      <div className="AddCategoryForm">
         <div className="formHead">
-          <h2>Category</h2>
+          <h2>Categorias</h2>
         </div>
         
         <div className="formContainer">
@@ -36,7 +36,7 @@ export default function AddCategoryForm() {
             <div className="row">             
               
             </div>
-              <h2>Images</h2>
+              <h2>Fotos</h2>
             <div className="rowImage">
               <div className="addImageContainer">
                 <ImageUpload />

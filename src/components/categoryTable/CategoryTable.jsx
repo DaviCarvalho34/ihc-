@@ -130,7 +130,7 @@ export default function CategoryTable() {
     return (
       
         <MUIDataTable
-            title={"Categories"}
+            title={"Categorias"}
             data={rows}
             columns={columns}
             options={options}

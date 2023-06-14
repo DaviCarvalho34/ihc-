@@ -130,7 +130,7 @@ export default function CustomersTable() {
     return (
       
         <MUIDataTable
-            title={"Customers"}
+            title={"Usuários"}
             data={rows}
             columns={columns}
             options={options}

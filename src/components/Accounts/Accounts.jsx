@@ -27,7 +27,7 @@ export const Accounts = () => {
             <div className="add-products" onClick={()=>{
             setOpen(true);
             }}>
-            <h4>Nova operação</h4>
+            <h4>Nova plano</h4>
             </div>
             <div className="table-container">
                 <AccountTable />

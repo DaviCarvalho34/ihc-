@@ -15,7 +15,7 @@ export const Customers = () => {
     return (
         <motion.div className="Products" initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}}>
             
-            <h1 className="titleDash">Customers</h1>
+            <h1 className="titleDash">Usuários</h1>
             <div className="table-container">
                 <CustomersTable />
             </div>
